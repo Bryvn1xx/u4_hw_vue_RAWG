@@ -4,7 +4,7 @@
       <!-- Search Form Goes Here -->
       <h2>Search Results</h2>
       <section class="search-results container-grid">
-        <GameCard @click='selectGame(game.id)' :name='game.name' :image='game.background_image' :key='game.id' v-for='game in searchResults'/>
+        <GameCard @click='selectGame(game.id)' :name='game.name' :image='game.background_image' :key='game.id' v-for='game in searchResults' :rating='game.rating' />
         <!-- <GameDetails :name='game.name'/> -->
         
           <form @submit='getSearchResults'>
@@ -25,7 +25,7 @@
     <div class="genres" v-if='!searched'>
       <h2>Genres</h2>
       <section class="container-grid">
-        <GenreCard :genres='genres' :image='genre.image_background' :name='genre.name' :key='genre.id' v-for='genre in genres'/>
+        <GenreCard @click='selectGenre(genre.id)' :genres='genres' :image='genre.image_background' :name='genre.name' :key='genre.id' v-for='genre in genres'/>
       </section>
     </div>
   </div>
@@ -77,6 +77,9 @@
         this.$router.push(`/details/${gameId}`)
         console.log('gameId', gameId)
         // this.selectGame()
+      },
+      selectGenre(genreId) {
+        this.$router.push(`/genre/${genreId}`)
       }
     }
   }

@@ -7,6 +7,7 @@
     <div class="info-wrapper flex-col">
       <!-- Game Name Goes Here -->
       <h2>{{ name }}</h2>
+      <h2>{{ rating }}</h2>
     </div>
   </div>
 </template>
@@ -14,7 +15,7 @@
 <script>
   export default {
     name: 'GameCard',
-    props: ['name', 'image'],
+    props: ['name', 'image', 'rating'],
 
   }
 //   methods: {

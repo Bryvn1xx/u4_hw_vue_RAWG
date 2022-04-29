@@ -48,7 +48,7 @@ Let's start with `main.js`.
 Head over to `router.js`. In here, we've scaffolded the Vue Router for you:
 
 ```js
-import { createWebHistory, createRouter } from "vue-router"
+import { createWebHistory, createRouter } from 'vue-router'
 import HomePage from './pages/HomePage'
 import GameDetails from './pages/GameDetails'
 import ViewGames from './pages/ViewGames'
@@ -154,6 +154,7 @@ Add a back button that allows you to go back to the home page.
 Display a list of the game's most recent posts from its subreddit page in the `GameDetails` component.
 
 Create two pages for `ViewPlatforms` and `PlatformDetails` to display the platform information available through the API.
+
 - **Hint: This will likely require more components as well**
 
 ## Homework
@@ -166,8 +167,6 @@ For completion you must have:
 - This page should display each game and it's rating prominently and users should have the ability to **sort** games by rating.
   - You should have a dropdown to sort the games either in descending or ascending order.
 - This page must be professionally styled and match the theme of the current application.
-
-
 
 ### Super Duper Mega Doppler Bonus
 
