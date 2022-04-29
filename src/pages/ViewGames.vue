@@ -36,7 +36,7 @@ import axios from 'axios'
         if(this.ascending) {
           this.games.sort((a,b) => b.rating - a.rating)
         } else {
-        this.games.sort((a,b) => b.rating - a.rating)
+        this.games.sort((a,b) => a.rating - b.rating)
         }
         this.ascending = !this.ascending
       }
